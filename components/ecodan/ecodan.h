@@ -20,7 +20,7 @@ namespace ecodan
 
     class EcodanHeatpump : public PollingComponent, public esphome::api::CustomAPIDevice {
     public:        
-        EcodanHeatpump() : PollingComponent(15000) {}
+        EcodanHeatpump() : PollingComponent(30000) {}
         void set_rx(int rx);
         void set_tx(int tx);
         void setup() override;
