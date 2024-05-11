@@ -136,7 +136,7 @@ namespace ecodan
         while (port.available() < remainingBytes)
         {
             vTaskDelay(pdMS_TO_TICKS(100));
-            if (std::chrono::steady_clock::now() - startTime > std::chrono::seconds(25))
+            if (std::chrono::steady_clock::now() - startTime > std::chrono::seconds(55))
             {
                 ESP_LOGI(TAG, "Serial port message could not be received within 10s (got %u / %u bytes)", port.available(), remainingBytes);
                 resync_rx();
